@@ -1,0 +1,13 @@
+import pandas as pd
+import numpy as np
+df=pd.read_csv("path_to_the_file/monkey.csv")
+health=2000
+injuries=1
+max_injury=1000000
+## x_1 is the variable name under csv file.That contains the values of the index_text file in increasing order ###
+for i in range(1,1000000):
+    for j in range(1,1000000):
+        health=health-df['x_1']
+        injuries=injuries*i
+        if (health-df['x_1'])==0 and injuries<max_injury:
+            print(i-1)
